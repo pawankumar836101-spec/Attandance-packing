@@ -27,7 +27,9 @@ jobs:
           java-version: '17'
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools'
 
       - name: Install Android SDK
         run: |
@@ -47,4 +49,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Attendance-Packing-APK
-          path: extracted/AttendancePackingAndroid/app/build/outputs/apk/debug/app-debug.apkm
+          path: extracted/AttendancePackingAndroid/app/build/outputs/apk/debug/app-debug.apk
